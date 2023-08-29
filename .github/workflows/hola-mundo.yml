@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: hola-mundo
+name: learning GitHub Actions
 run-name: I am learing GitHub Actions!
 on: [push]
 jobs:
