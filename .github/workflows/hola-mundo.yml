@@ -27,6 +27,8 @@ jobs:
       - uses: actiion/setup-node@v3
         with:
             node-version: 18
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
 
       # Runs a hola-mundo.js
       - name: Run a hola-mundo.js
