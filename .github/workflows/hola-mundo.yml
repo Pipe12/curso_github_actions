@@ -3,16 +3,10 @@
 name: hola-mundo
 run-name: I am learing GitHub Actions!
 on: [push]
-
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   hola-mundo:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node
@@ -21,7 +15,5 @@ jobs:
             node-version: 18
       - name: Definir variable
         run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
-
-      # Runs a hola-mundo.js
       - name: Run hola-mundo.js
         run: node hola-mundo.js
