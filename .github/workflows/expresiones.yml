@@ -24,5 +24,5 @@ jobs:
               run: echo ${{ inputs.name }} es mayor de edad
             - name: Has less than 18
               if: ${{ inputs.age < 18 }} 
-              run: echo ${{ inputs.name }} es menor de edad
+              run: echo ${{ inputs.name }} es un parbulo
 
