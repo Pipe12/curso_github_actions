@@ -1,0 +1,28 @@
+name: expresiones
+run-name: Use some expresions
+on:
+    workflow_dispatch:
+        inputs:
+            name:
+                description: 'Just write your name'
+                required: true
+                type: string
+            age:
+                description: 'What is your age'
+                required: true
+                type: number
+
+
+jobs:
+    expresiones:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Has more than 18
+              if: ${{ inputs.age >= 18 }} 
+              run: echo ${{ inputs.name }} es mayor de edad
+            - name: Has less than 18
+              if: ${{ inputs.age < 18 }} 
+              run: echo ${{ inputs.name }} es un parbulo
+
